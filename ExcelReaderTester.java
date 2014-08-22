@@ -21,7 +21,6 @@ public class ExcelReaderTester {
   private static void jPrinter(JSONObject json, File output) {
     try {
       FileWriter writer = new FileWriter(output);     
-      
       /* Print without whitespace: */
       // writer.write(json.toString());
       
