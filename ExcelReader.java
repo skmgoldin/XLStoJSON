@@ -49,7 +49,7 @@ public class ExcelReader {
     for(int row = 1; row < sheet.getRows(); row++) {
       Cell projectCell = sheet.getCell(PROJECTCOLUMN, row);
       String projectID = projectCell.getContents();
-      parsedData.append(projectID, parseProject(sheet, row));
+      parsedData.append(projectID, JSONParseProject(sheet, row));
     } 
     return parsedData;
   }
@@ -60,7 +60,7 @@ public class ExcelReader {
    * @param projRow the row in sheet containing the project in question.
    * @return a JSONObject of the project in projRow.
    */
-  private static JSONObject parseProject(Sheet sheet, int projRow) {
+  private static JSONObject JSONParseProject(Sheet sheet, int projRow) {
     JSONObject project = new JSONObject();
     final int COLUMNS = 29;
 
