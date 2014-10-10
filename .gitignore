@@ -74,6 +74,8 @@ local.properties
 # TeXlipse plugin
 .texlipse
 
+### C ###
+*.o
 
 ### vim ###
 [._]*.s[a-w][a-z]
